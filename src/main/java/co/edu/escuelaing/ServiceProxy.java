@@ -14,6 +14,7 @@ public class ServiceProxy {
         port(getPort());
         staticFileLocation("public");
         get("search", (req,res) -> {
+            res.type("application/json");
             String list = req.queryParams("list");
             String value = req.queryParams("value");
             String opt = req.queryParams("operation");

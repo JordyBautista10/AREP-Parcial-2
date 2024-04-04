@@ -9,7 +9,6 @@ public class MathServices {
     public static void main(String... args){
         port(getPort());
         get("linearSearch", (req,res) -> {
-            System.out.println("---------->");
             res.type("application/json");
             String result;
             String numbers = req.queryParams("list");
@@ -25,7 +24,6 @@ public class MathServices {
         });
 
         get("binarySearch", (req,res) -> {
-            System.out.println("<----------");
             res.type("application/json");
             String result;
             String numbers = req.queryParams("list");
