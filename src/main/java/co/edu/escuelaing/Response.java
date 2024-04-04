@@ -16,10 +16,10 @@ public class Response {
     @Override
     public String toString() {
         return "{" +
-                "operation='" + operation + '\'' +
-                ", inputlist='" + inputlist + '\'' +
-                ", value='" + value + '\'' +
-                ", output='" + output + '\'' +
+                "operation:'" + operation + '\'' +
+                ", inputlist:'" + inputlist + '\'' +
+                ", value:'" + value + '\'' +
+                ", output:'" + output + '\'' +
                 '}';
     }
 }

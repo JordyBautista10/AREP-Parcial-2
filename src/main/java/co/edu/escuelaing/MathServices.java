@@ -1,8 +1,5 @@
 package co.edu.escuelaing;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 import static spark.Spark.*;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -13,7 +10,7 @@ public class MathServices {
         port(getPort());
         get("linearsearch", (req,res) -> {
             res.type("application/json");
-            String result = "";
+            String result;
             String numbers = req.queryParams("list");
             String value = req.queryParams("value");
             try {
@@ -23,12 +20,12 @@ public class MathServices {
             } catch (Exception e) {
                 result = e.getMessage();
             }
-            Response response = new Response("linearSearch", numbers, value, result);
-            return response;
+            return new Response("linearSearch", numbers, value, result);
         });
 
         get("binarysearch", (req,res) -> {
-            String result = "";
+            res.type("application/json");
+            String result;
             String numbers = req.queryParams("list");
             String value = req.queryParams("value");
             try {
@@ -38,8 +35,7 @@ public class MathServices {
             } catch (Exception e) {
                 result = e.getMessage();
             }
-            Response response = new Response("linearSearch", numbers, value, result);
-            return response.toString();
+            return new Response("binarySearch", numbers, value, result);
         });
     }
 
@@ -61,10 +57,19 @@ public class MathServices {
 
     private static String BynarySearch(String[] numbersList, int valueInt){
         //Suponiendo que la lista esta ordenada de menor a mayor
+        int head = 0;
+        int tail = numbersList.length - 1;
+        int current = numbersList.length / 2;
+
         for (int i = 0; i < numbersList.length; i++){
-            if (Integer.parseInt(numbersList[i]) == valueInt) {
-                return String.valueOf(i);
+            if (Integer.parseInt(numbersList[current]) < valueInt) {
+                head = current;
+            } else if ( Integer.parseInt(numbersList[current]) > valueInt ) {
+                tail = current;
+            } else {
+                return String.valueOf(current);
             }
+            current = (head + tail) / 2;
         }
         return "-1";
     }
