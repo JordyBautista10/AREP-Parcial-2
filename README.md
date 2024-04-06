@@ -116,3 +116,6 @@ En caso de que el elemento buscado no se encuentre, se va a ver de la siguiente 
 
 * [Despliegue](https://youtu.be/vEaA65SI9XY)
 
+## Autor 
+Jordy Santiago bautista Sepúlveda
+
