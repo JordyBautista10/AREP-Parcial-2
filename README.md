@@ -26,7 +26,28 @@ la mitad de los datos restantes hasta encontrar al buscado o devolver -1 en caso
 
 ### Como ejecutar (Local)
 
+Clonamos el repositorio:
+~~~
+git clonehttps://github.com/JordyBautista10/AREP-Parcial-2.git
+~~~
 
+Se entra a la carpeta
+~~~
+cd AREP-Parcial-2
+~~~
+
+Se descargan las dependencias
+~~~
+mvn clean install
+~~~
+
+Se crean las variables de entonrno:
+~~~
+set SERVER_1="http://localhost:4567/"
+set SERVER_2="http://localhost:4567/"
+~~~
+
+Ahora si se pueden correr los servicios:
 ~~~
 java -cp "target/classes;target/dependency/*" co.edu.escuelaing.ServiceProxy
 ~~~
@@ -36,16 +57,45 @@ java -cp "target/classes;target/dependency/*" co.edu.escuelaing.MathServices
 ~~~
 
 ### Como ejecutar (Nube)
-
+Se descargan las herramientas necesarias:
 ~~~
 sudo yum install maven
 ~~~
 ~~~
 sudo yum install git
 ~~~
-
 ~~~
 sudo yum install java-17-amazon-corretto.x86_64
+~~~
+
+Clonamos el repositorio:
+~~~
+git clonehttps://github.com/JordyBautista10/AREP-Parcial-2.git
+~~~
+
+Se entra a la carpeta
+~~~
+cd AREP-Parcial-2
+~~~
+
+Se descargan las dependencias
+~~~
+mvn clean install
+~~~
+
+Se crean las variables de entonrno:
+~~~
+export SERVER_1='http://[Dirección IPv4 pública]:4567/'
+export SERVER_2='http://[Dirección IPv4 pública]:4567/'
+~~~
+
+Ahora si se pueden correr los servicios:
+~~~
+java -cp "target/classes;target/dependency/*" co.edu.escuelaing.ServiceProxy
+~~~
+
+~~~
+java -cp "target/classes;target/dependency/*" co.edu.escuelaing.MathServices
 ~~~
 
 ### Pruebas
@@ -57,9 +107,9 @@ http://localhost:4566/index.html
 Y se ingresa la lista de valores y el valor a buscar, tenga en cuenta que para el Binary search debe escribir la lista
 de elementos ordenada de menor a mayor
 
-![img.png](Images/img.png
+![img.png](Images/img.png)
 
 ### Despliegue
 
-(Despliegue)[https://youtu.be/vEaA65SI9XY]
+* [Despliegue](https://youtu.be/vEaA65SI9XY)
 
