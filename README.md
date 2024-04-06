@@ -41,17 +41,16 @@ Se descargan las dependencias
 mvn clean install
 ~~~
 
-Se crean las variables de entonrno:
+Se crean las variables de entorno:
 ~~~
 set SERVER_1="http://localhost:4567/"
 set SERVER_2="http://localhost:4567/"
 ~~~
 
-Ahora si se pueden correr los servicios:
+Ahora sí se pueden correr los servicios:
 ~~~
 java -cp "target/classes;target/dependency/*" co.edu.escuelaing.ServiceProxy
 ~~~
-
 ~~~
 java -cp "target/classes;target/dependency/*" co.edu.escuelaing.MathServices
 ~~~
@@ -83,13 +82,13 @@ Se descargan las dependencias
 mvn clean install
 ~~~
 
-Se crean las variables de entonrno:
+Se crean las variables de entorno, usando comando de Linux por el sistema operativo de la máquina de EC2:
 ~~~
 export SERVER_1='http://[Dirección IPv4 pública]:4567/'
 export SERVER_2='http://[Dirección IPv4 pública]:4567/'
 ~~~
 
-Ahora si se pueden correr los servicios:
+Se corren los servicios (en cada una de las máquinas, deberían ser 3):
 ~~~
 java -cp "target/classes:target/dependency/*" co.edu.escuelaing.ServiceProxy
 ~~~
@@ -105,9 +104,13 @@ Para Probar el servicio, se ingresa a la url:
 http://localhost:4566/index.html
 ~~~
 Y se ingresa la lista de valores y el valor a buscar, tenga en cuenta que para el Binary search debe escribir la lista
-de elementos ordenada de menor a mayor
+de elementos ordenada de menor a mayor:
 
 ![img.png](Images/img.png)
+
+En caso de que el elemento buscado no se encuentre, se va a ver de la siguiente forma:
+
+![img.png](Images/img_3.png)
 
 ### Pruebas Despliegue (Nube)
 
