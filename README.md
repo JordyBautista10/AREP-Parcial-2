@@ -24,7 +24,7 @@ partes y compara en cuál de los dos rangos puede estar el número a buscar, por
 la mitad de los datos restantes hasta encontrar al buscado o devolver -1 en caso de no encontrarlo.
 
 
-### Como ejecutar 
+### Como ejecutar (Local)
 
 
 ~~~
@@ -33,6 +33,19 @@ java -cp "target/classes;target/dependency/*" co.edu.escuelaing.ServiceProxy
 
 ~~~
 java -cp "target/classes;target/dependency/*" co.edu.escuelaing.MathServices
+~~~
+
+### Como ejecutar (Nube)
+
+~~~
+sudo yum install maven
+~~~
+~~~
+sudo yum install git
+~~~
+
+~~~
+sudo yum install java-17-amazon-corretto.x86_64
 ~~~
 
 ### Pruebas
@@ -45,4 +58,8 @@ Y se ingresa la lista de valores y el valor a buscar, tenga en cuenta que para e
 de elementos ordenada de menor a mayor
 
 ![img.png](Images/img.png
+
+### Despliegue
+
+(Despliegue)[https://youtu.be/vEaA65SI9XY]
 
