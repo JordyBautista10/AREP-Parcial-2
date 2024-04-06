@@ -91,14 +91,14 @@ export SERVER_2='http://[Dirección IPv4 pública]:4567/'
 
 Ahora si se pueden correr los servicios:
 ~~~
-java -cp "target/classes;target/dependency/*" co.edu.escuelaing.ServiceProxy
+java -cp "target/classes:target/dependency/*" co.edu.escuelaing.ServiceProxy
 ~~~
 
 ~~~
-java -cp "target/classes;target/dependency/*" co.edu.escuelaing.MathServices
+java -cp "target/classes:target/dependency/*" co.edu.escuelaing.MathServices
 ~~~
 
-### Pruebas
+### Pruebas (Local)
 
 Para Probar el servicio, se ingresa a la url:
 ~~~
@@ -109,7 +109,7 @@ de elementos ordenada de menor a mayor
 
 ![img.png](Images/img.png)
 
-### Despliegue
+### Pruebas Despliegue (Nube)
 
 * [Despliegue](https://youtu.be/vEaA65SI9XY)
 
