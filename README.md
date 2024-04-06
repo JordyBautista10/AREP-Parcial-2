@@ -12,12 +12,28 @@ Donde cada uno de los elementos cumple las siguientes funciones:
 #### Service Proxy
 
 Recibe las solicitudes de llamado desde los clientes y se las delega a las dos instancias del servicio de ordenamiento
-usando un algoritmo de round-robin
+usando un algoritmo de round-robin, también es quien le da el acceso a la página que usará el cliente.
 
 #### Math Services
 
-Este servicio recibe peticiones con los datos ``(lista, valor)``, done implementa dos algoitmos de búsqueda diferentes,
-Linear search y binary search.
+Este servicio recibe peticiones con los datos ``(lista, valor)``, done implementa dos algoritmos de búsqueda diferentes,
+Linear search y binary search, donde el primero realiza la búsqueda dato por dato dentro de la lista hasta encontrar él
+dato solicitado, este método no es muy eficiente para listas muy grandes, pues en el peor de los casos la tiene que recorrer
+toda, por el contrario, el segundo método, como obtiene los elementos ya ordenados, este va dividiendo la lista en dos
+partes y compara en cuál de los dos rangos puede estar el número a buscar, por lo que en cada iteración se va descartando
+la mitad de los datos restantes hasta encontrar al buscado o devolver -1 en caso de no encontrarlo.
+
+
+### Como ejecutar 
+
+
+~~~
+java -cp "target/classes;target/dependency/*" co.edu.escuelaing.ServiceProxy
+~~~
+
+~~~
+java -cp "target/classes;target/dependency/*" co.edu.escuelaing.MathServices
+~~~
 
 ### Pruebas
 
